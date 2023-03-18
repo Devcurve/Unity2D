@@ -22,6 +22,10 @@ public class ControllerManager : MonoBehaviour
     [HideInInspector] public float Hor;
     [HideInInspector] public float Ver;
     
+    [HideInInspector] public Vector3 MovingBox;
+    [HideInInspector] public Vector3 offset;
+    
+    
     void Awake()
     {
         if (instance == null)
@@ -32,6 +36,9 @@ public class ControllerManager : MonoBehaviour
     {
         Hor = 0.0f;
         Ver = 0.0f;
+
+        offset = new Vector3(-5.0f, -7.7f, 0.0f);
+        MovingBox = new Vector3(13.0f, 1.5f, 0.0f);
     }
 
     void Update()
